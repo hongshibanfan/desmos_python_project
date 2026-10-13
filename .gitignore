@@ -1,0 +1,28 @@
+# 构建产物
+dist/
+build/
+*.egg-info/
+
+# Python 缓存与编译产物
+__pycache__/
+*.py[cod]
+*.so
+
+# 本工具运行时数据（含浏览器 Cookie 与登录状态，切勿提交）
+.desmos_profile/
+.playwright_tmp/
+.testprofile/
+.repro_profile/
+.probe_profile/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 编辑器与系统
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+desktop.ini

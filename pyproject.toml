@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "desmos-writer"
+dynamic = ["version"]
+description = "用 Playwright 把数学表达式写入 Desmos 网页的自动化工具"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "desmos-writer contributors" }]
+keywords = ["desmos", "playwright", "automation", "math", "graph"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Intended Audience :: Science/Research",
+]
+dependencies = ["playwright>=1.40"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+desmos-writer = "desmos_writer_pack.desmos_writer:main"
+
+[tool.setuptools]
+packages = ["desmos_writer_pack"]
+
+[tool.setuptools.dynamic]
+version = { attr = "desmos_writer_pack.__version__" }
